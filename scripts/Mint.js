@@ -5,9 +5,6 @@ async function main() {
   const [deployer] = await hre.ethers.getSigners();
   console.log("Minting d'une propriété par :", deployer.address);
 
-  // Charger l'adresse du contrat depuis `contractAddress.txt`
-  const contractAddress = fs.readFileSync("./contractAddress.txt", "utf-8").trim();
-  console.log("Chargement du contrat depuis :", contractAddress);
 
   // connexion au contrat existant
   const PropertyToken = await hre.ethers.getContractFactory("PropertyToken");
